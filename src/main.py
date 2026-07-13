@@ -1,14 +1,17 @@
 """Main program for the python-lab project.
 
-Prompts the user for a number and prints its square, whether it is
-even or odd, and its equivalent temperature in Fahrenheit (treating
-the input as a Celsius value).
+Prompts the user for their name and a number, then prints a greeting
+along with the number's square, whether it is even or odd, and its
+equivalent temperature in Fahrenheit (treating the input as Celsius).
 """
 
-from utils import square, is_even, celsius_to_fahrenheit
+from utils import square, is_even, celsius_to_fahrenheit, greet
 
 
 def main():
+    name = input("Enter your name: ")
+    print(greet(name))
+
     number = float(input("Enter a number: "))
 
     print(f"Square: {square(number)}")
